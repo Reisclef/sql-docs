@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ## Sample Replication Script  
  The following script can be executed to setup publishing and distribution on a server.  
   
-```  
+```sql
 -- This script uses sqlcmd scripting variables. They are in the form  
 -- $(MyVariable). For information about how to use scripting variables    
 -- on the command line and in SQL Server Management Studio, see the   
@@ -128,7 +128,7 @@ GO
   
  To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
   
-```  
+```sql
 :setvar DistPubServer N'MyPublisherAndDistributor';  
   
 -- Install the Distributor and the distribution database.  
